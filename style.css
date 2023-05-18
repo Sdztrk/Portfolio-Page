@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    background-color: #14273C;
+    background: linear-gradient();
+    height: 10vh;
+    width: 100vw;
+    z-index: 1000;
+    position: relative;
+    box-shadow: 15px;
+    position: fixed;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    height: 10vh;
+}
+.name{
+    float: left;
+    margin-top: 25px;
+    margin-left: 25px;
+    color: white;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+}
+.navigation_left{
+    float: right;
+    color: white;
+    margin-right: 30px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+}
+
+li{
+    transition: all 0s ease-in-out;
+}
+
+li:hover{
+    transform: scale(1.8);
+}
+
+li>a{
+    text-decoration: none;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    margin:auto 20px;
+}
+
+.first_circle{
+    width: 1200px;
+    height: 1200px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    left: -700px;
+    top: -700px;
+    z-index: 0;
+
+}
+.second_circle{
+    width: 750px;
+    height: 750px;
+    background-color: red;
+    border-radius: 50%;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #131E25;
+
+}
+.intro{
+    text-align: center;
+}
+.intro>h1{
+    color: white;
+    font-size: 60px;
+    letter-spacing: 20px;
+}
+.intro>h5{
+    color: green;
+    font-size: xx-large;
+}
+.projects{
+    height: 40vh;
+    background-color: #131E25;
+    text-align: center;
+}
+.projects>h1{
+    color: white;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.images>img{
+    width: 500px;
+    margin: 0px 50px 0px 50px;
+    transition: all 0s ease-out;
+}
+
+.images>img:hover{
+    transform: translate(0,-20px);
+}
+
+.footer{
+    text-align: center;
+    height: 20vh;
+    background-color: #131E25;
+    color: white;
+
+}
+.link{
+    padding-top: 110px;
+}
+.link>a>img{
+    width: 50px;
+    color: white;
+    padding: 0px 5px 0px;
+
+}
