@@ -11,6 +11,7 @@
     position: relative;
     box-shadow: 15px;
     position: fixed;
+    background: linear-gradient(to left,#14273C,#0a3d77 );
 }
 nav{
     display: flex;
@@ -83,6 +84,7 @@ li>a{
 }
 .intro{
     text-align: center;
+    z-index: 1;
 }
 .intro>h1{
     color: white;
@@ -133,4 +135,14 @@ li>a{
     color: white;
     padding: 0px 5px 0px;
 
+}
+.dog{
+    background-color: chartreuse;
+    padding-top: 40px;
+    height: 100%;
+}
+.digdiv{
+    width: 100%;
+    height: 100%;
+    background-color: #131E25;
 }
