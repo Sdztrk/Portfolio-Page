@@ -1,18 +1,37 @@
 *{
     margin: 0;
     box-sizing: border-box;
+
+}
+body{
+    background-color: #009688;
+
 }
 .header{
-    background-color: #14273C;
-    background: linear-gradient();
     height: 10vh;
     width: 100vw;
     z-index: 1000;
     position: relative;
     box-shadow: 15px;
     position: fixed;
-    background: linear-gradient(to left,#14273C,#0a3d77 );
-}
+    background: linear-gradient(-45deg, #ee76527c, #e73c7e79, #23a5d581, #23d5ab8a);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    z-index: 1000;
+ }
+ /* keyframes for animation: */
+ @keyframes gradient{
+     0%{
+         background-position: 0% 50%;
+     }
+     50%{
+         background-position: 100% 50%;
+     } 
+     100%{
+         background-position: 0% 50%;
+     }
+ }
+
 nav{
     display: flex;
     flex-direction: row;
@@ -55,51 +74,58 @@ li>a{
 }
 
 .first_circle{
-    width: 1200px;
-    height: 1200px;
-    background-color: yellow;
+    width: 1500px;
+    height: 1500px;
+    background-color: rgba(255, 255, 0, 0.37);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     position: absolute;
-    left: -700px;
-    top: -700px;
+    left: 200px;
+    top: -1200px;
     z-index: 0;
-
 }
+
 .second_circle{
-    width: 750px;
-    height: 750px;
-    background-color: red;
+    width: 1250px;
+    height: 1250px;
+    background-color: rgba(255, 0, 0, 0.178);
     border-radius: 50%;
 }
+
 .main{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 90vh;
-    background-color: #131E25;
-
+    background-color: #009688;
 }
+
 .intro{
+    padding-top: 0px;
     text-align: center;
     z-index: 1;
 }
+
 .intro>h1{
-    color: white;
+    color: darkmagenta;
     font-size: 60px;
     letter-spacing: 20px;
 }
+
 .intro>h5{
     color: green;
     font-size: xx-large;
 }
+
 .projects{
     height: 40vh;
-    background-color: #131E25;
+    background-color: #009688;
     text-align: center;
+    
 }
+
 .projects>h1{
     color: white;
 }
@@ -110,41 +136,57 @@ li>a{
     margin-top: 80px;
 }
 
-.images>img{
-    width: 500px;
+.clarusway_intro_div>a>img{
+    border-radius: 5px;
+    width: 300px;
     margin: 0px 50px 0px 50px;
-    transition: all 0s ease-out;
+    border: 1px solid black;
+    box-shadow: 5px 3px 20px rgb(71, 119, 141);
+}
+.weserbergland_intro_div>a>img{
+    border-radius: 5px;
+    width: 300px;
+    height: 150px;
+    margin: 0px 50px 0px 50px;
+    border: 1px solid black;
+    box-shadow: 5px 3px 20px rgb(71, 119, 141);
+
 }
 
-.images>img:hover{
-    transform: translate(0,-20px);
+.weserbergland_intro:hover,.clarusway_intro:hover{
+    animation-name: hover-shake;
+    animation-duration: .7s;
+    animation-iteration-count:infinite;
+    cursor: pointer;
+}
+
+@keyframes hover-shake{
+    0% {transform: scale(1.0);}
+    25% {transform: scale(1.07);}
+    50% {transform: scale(1.0);}
+    75% {transform: scale(1..07);}
+    100% {transform: scale(1.0);}
 }
 
 .footer{
     text-align: center;
-    height: 20vh;
+    height: 10vh;
     background-color: #131E25;
     color: white;
-
 }
-.link{
+/* .link{
     padding-top: 110px;
-}
+} */
 .link>a>img{
     width: 50px;
     color: white;
     padding: 0px 5px 0px;
+}
 
-}
-.dog{
-    background-color: chartreuse;
-    padding-top: 40px;
-    height: 100%;
-}
 .digdiv{
     width: 100%;
     height: 100%;
-    background-color: #131E25;
+    background-color: #009688;
 }
 .wave{
 
@@ -164,3 +206,136 @@ li>a{
    60% { transform: rotate( 0.0deg) }
   100% { transform: rotate( 0.0deg) }
 }
+
+.spinner-box {
+    /* position: absolute;
+    top: 50px; */
+    float: left;
+    margin-top: 100px;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009688;
+  }
+
+  .solar-system {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .orbit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgreen;
+    border-radius: 50%;
+} 
+
+.earth-orbit {
+    width: 200px;
+    height: 200px;
+    animation: spin 12s linear 0s infinite;
+}
+
+.venus-orbit {
+    width: 150px;
+    height: 150px;
+    animation: spin 7s linear 0s infinite;
+}
+
+.mercury-orbit {
+    width: 100px;
+    height: 100px;
+    animation: spin 3s linear 0s infinite;
+}
+
+.planet {
+    position: absolute;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: lightblue;
+}
+
+.sun {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: rgb(251, 255, 0);
+}
+@keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to{
+      transform: rotate(359deg);
+    }
+  }
+  .spinner-box2 {
+    /* position: absolute;
+    top: 50px;
+    left: 1500px; */
+    float: right;
+    margin-top: 100px;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009688;
+  }
+  .leo-border-1 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgb(63,249,220);
+    background: linear-gradient(0deg, rgba(63,249,220,0.1) 33%, rgba(63,249,220,1) 100%);
+    animation: spin3D 1.8s linear 0s infinite;
+  }
+  
+  .leo-core-1 {
+    width: 100%;
+    height: 100%;
+    background-color: #37474faa;
+    border-radius: 50%;
+  }
+  
+  .leo-border-2 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgb(251, 91, 83);
+    background: linear-gradient(0deg, rgba(251, 91, 83, 0.1) 33%, rgba(251, 91, 83, 1) 100%);
+    animation: spin3D 2.2s linear 0s infinite;
+  }
+  
+  .leo-core-2 {
+    width: 100%;
+    height: 100%;
+    background-color: #1d2630aa;
+    border-radius: 50%;
+  }
+  @keyframes spin3D {
+    from {
+      transform: rotate3d(.1,.1,.1, 360deg);
+    }
+    to{
+      transform: rotate3d(0deg);
+    }
+  }
