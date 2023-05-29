@@ -152,8 +152,27 @@ li>a{
     box-shadow: 5px 3px 20px rgb(71, 119, 141);
 
 }
+.google_landing_intro_div>a>img{
+    border-radius: 5px;
+    width: 300px;
+    height: 150px;
+    margin: 0px 50px 0px 50px;
+    border: 1px solid black;
+    box-shadow: 5px 3px 20px rgb(71, 119, 141);
+}
+.Web_Design_div>a>img{
+    border-radius: 5px;
+    width: 300px;
+    height: 150px;
+    margin: 0px 50px 0px 50px;
+    border: 1px solid black;
+    box-shadow: 5px 3px 20px rgb(71, 119, 141);
+}
 
-.weserbergland_intro:hover,.clarusway_intro:hover{
+.weserbergland_intro:hover,
+.clarusway_intro:hover,
+.google_landing_intro:hover
+{
     animation-name: hover-shake;
     animation-duration: .7s;
     animation-iteration-count:infinite;
