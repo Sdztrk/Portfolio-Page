@@ -19,19 +19,6 @@ body{
     animation: gradient 5s ease infinite;
     z-index: 1000;
  }
- /* keyframes for animation: */
- @keyframes gradient{
-     0%{
-         background-position: 0% 50%;
-     }
-     50%{
-         background-position: 100% 50%;
-     } 
-     100%{
-         background-position: 0% 50%;
-     }
- }
-
 nav{
     display: flex;
     flex-direction: row;
@@ -179,14 +166,6 @@ li>a{
     cursor: pointer;
 }
 
-@keyframes hover-shake{
-    0% {transform: scale(1.0);}
-    25% {transform: scale(1.07);}
-    50% {transform: scale(1.0);}
-    75% {transform: scale(1..07);}
-    100% {transform: scale(1.0);}
-}
-
 .footer{
     text-align: center;
     height: 10vh;
@@ -214,16 +193,6 @@ li>a{
     animation-iteration-count: infinite;
     transform-origin: 70% 70%;
     display: inline-block;
-}
-@keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }
-  100% { transform: rotate( 0.0deg) }
 }
 
 .spinner-box {
@@ -288,14 +257,6 @@ li>a{
 	border-radius: 50%;
 	background-color: rgb(251, 255, 0);
 }
-@keyframes spin {
-    from {
-      transform: rotate(0);
-    }
-    to{
-      transform: rotate(359deg);
-    }
-  }
   .spinner-box2 {
     /* position: absolute;
     top: 50px;
@@ -350,6 +311,9 @@ li>a{
     background-color: #1d2630aa;
     border-radius: 50%;
   }
+
+   /* keyframes for animations: */
+
   @keyframes spin3D {
     from {
       transform: rotate3d(.1,.1,.1, 360deg);
@@ -358,3 +322,44 @@ li>a{
       transform: rotate3d(0deg);
     }
   }
+  
+ @keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    } 
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to{
+      transform: rotate(359deg);
+    }
+  }
+
+  
+@keyframes hover-shake{
+    0% {transform: scale(1.0);}
+    25% {transform: scale(1.07);}
+    50% {transform: scale(1.0);}
+    75% {transform: scale(1..07);}
+    100% {transform: scale(1.0);}
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
