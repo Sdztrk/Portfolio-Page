@@ -363,3 +363,96 @@ li>a{
    60% { transform: rotate( 0.0deg) }
   100% { transform: rotate( 0.0deg) }
 }
+/* media queries */
+@media screen and (max-width: 768px) {
+    .header{
+        height: 10vh;
+        width: 100vw;
+        z-index: 1000;
+        position: relative;
+        box-shadow: 15px;
+        position: fixed;
+        background: linear-gradient(-45deg, #ee76527c, #e73c7e79, #23a5d581, #23d5ab8a);
+        background-size: 400% 400%;
+        animation: gradient 5s ease infinite;
+        z-index: 1000;
+     }
+    nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+        height: 10vh;
+    }
+    .name{
+        float: left;
+        margin-top: 25px;
+        margin-left: 25px;
+        color: white;
+        font-family: sans-serif;
+        letter-spacing: 4px;
+    }
+    .navigation_left{
+        float: right;
+        color: white;
+        margin-right: 30px;
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+    }
+    
+    li{
+        transition: all 0s ease-in-out;
+    }
+    
+    li:hover{
+        transform: scale(1.8);
+    }
+    
+    li>a{
+        text-decoration: none;
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+        margin:auto 20px;
+    }
+    
+    .first_circle{
+        width: 1500px;
+        height: 1500px;
+        background-color: rgba(255, 255, 0, 0.37);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        left: 200px;
+        top: -1200px;
+        z-index: 0;
+    }
+    
+    .second_circle{
+        width: 1250px;
+        height: 1250px;
+        background-color: rgba(255, 0, 0, 0.178);
+        border-radius: 50%;
+    }
+    
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        background-color: #009688;
+    }
+    
+    .intro{
+        padding-top: 0px;
+        text-align: center;
+        z-index: 1;
+        /* When the size of page get smaller the intro section will be smaller too */
+        width: 100%;
+        height: 100%;
+}
+}
